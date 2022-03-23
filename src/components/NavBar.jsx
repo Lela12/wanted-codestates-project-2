@@ -38,10 +38,10 @@ const NavBar = () => {
 };
 
 export default NavBar;
+
 const NabCantainer = styled.div`
   width: 100%;
   display: flex;
-  background-color: #fff;
   background-color: #005fcc;
 `;
 
@@ -55,6 +55,7 @@ const NavWrapper = styled.nav`
   position: relative;
   margin: auto;
   line-height: 55px;
+  z-index: 15;
 `;
 
 const TabContainer = styled.ul`
@@ -73,9 +74,11 @@ const Tab = styled.li`
   font-size: 1rem;
   text-align: center;
   float: left;
-  color: #fff;
   transition: all 0.15s ease-in-out;
   margin-right: 2rem;
+  background-color: transparent;
+  color: #fff;
+  opacity: 0.5;
 
   &:after {
     position: absolute;
