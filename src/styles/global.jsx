@@ -16,7 +16,6 @@ const GlobalStyle = createGlobalStyle`
   sup, table, tbody, td, tfoot, th, thead, time, tr, ul, var, video{
     margin: 0;
     padding: 0;
-    border: 0;
     outline: 0;
     font-size: 100%;
     vertical-align: baseline;
@@ -36,9 +35,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Noto Sans KR', sans-serif;
     letter-spacing: -1px;
     vertical-align: baseline;
-  }
-  body{
-    display: block;
   }
   a{
     text-decoration: none;
