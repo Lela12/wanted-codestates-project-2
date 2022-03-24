@@ -1,9 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Profile from './components/Profile';
-import SelectTab from './components/SelectTab';
+import Header from './components/Header/Header';
 import MainPage from './pages/MainPage';
-import RankPage from './pages/RankPage';
 
 function App() {
   return (

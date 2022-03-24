@@ -1,7 +1,8 @@
 import React from 'react';
 import { FaInfoCircle } from 'react-icons/fa';
 import styled from 'styled-components';
-import Profile from '../components/Profile';
+import Match from '../components/Match/Match';
+import Profile from '../components/Profile/Profile';
 
 const MainPage = () => {
   return (
@@ -13,11 +14,13 @@ const MainPage = () => {
         카트라이더 매치데이터는 최근 1년치 데이터만 확인할 수 있습니다
       </ApiInfo>
       <Profile />
+      <Match />
     </Container>
   );
 };
 
 export default MainPage;
+
 const Container = styled.div`
   width: 100rem;
   margin: 0 auto;
