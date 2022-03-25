@@ -1,4 +1,3 @@
-import React from 'react';
 import { FaInfoCircle } from 'react-icons/fa';
 import styled from 'styled-components';
 import Match from '../components/Match/Match';
@@ -15,6 +14,7 @@ const MainPage = () => {
       </ApiInfo>
       <Profile />
       <Match />
+      <StatusWrap></StatusWrap>
     </Container>
   );
 };
@@ -36,4 +36,8 @@ const ApiInfo = styled.section`
 const InfoIcon = styled.span`
   display: inline-block;
   margin-right: 5px;
+`;
+
+const StatusWrap = styled.div`
+  display: flex;
 `;

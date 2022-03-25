@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 import { FaRedo, FaBell, FaShareAlt, FaEye } from 'react-icons/fa';
 import SelectTab from './SelectTab';
+import ReportModal from '../../ReportModal';
+import { useState } from 'react';
 
 const Profile = () => {
+  const [IsReportModalOpen, setIsReportModalOpen] = useState(false);
+
+  const onReportModalHandler = () => {
+    setIsReportModalOpen(!IsReportModalOpen);
+  };
+
   return (
     <ProfileContainer>
       <Wrap>
@@ -27,12 +35,15 @@ const Profile = () => {
                 </Icon>
                 전적갱신
               </ButtonWrap>
-              <ButtonWrap>
+              <ButtonWrap onClick={onReportModalHandler}>
                 <Icon>
                   <FaBell />
                 </Icon>
                 신고하기
               </ButtonWrap>
+              {IsReportModalOpen ? (
+                <ReportModal onReportModalHandler={onReportModalHandler} />
+              ) : null}
               <ButtonWrap>
                 <Icon>
                   <FaShareAlt />
@@ -133,8 +144,7 @@ const ButtonWrap = styled.button`
   text-decoration: none;
   color: #1f334a;
 `;
-// const ReportButton = styled.button``;
-// const ShareButton = styled.button``;
+
 const Icon = styled.span`
   position: relative;
   top: 1px;
